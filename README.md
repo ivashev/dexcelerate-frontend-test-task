@@ -21,12 +21,6 @@ Here's what's currently broken or missing
 #### WebSocket Event Issues
 - **scanner-pairs event**: Sometimes the WebSocket connection doesn't receive the `scanner-pairs` event properly. This means real-time updates for new token pairs might not work consistently. The event handler is there in the code, but the connection seems flaky.
 
-### 🔧 What We're Working On
-- Fixing the priceUsd type mismatch
-- Adding proper sorting for Token and Exchange columns  
-- Implementing market cap filtering (once the API supports it)
-- Making the WebSocket connection more reliable
-
 ## Directory Structure
 
 ```
@@ -54,34 +48,6 @@ dexcelerate-frontend-test-task/
 - Node.js 18+ 
 - npm or yarn (whatever you prefer)
 
-### Getting Started
-
-1. **Clone the repo**
-   ```bash
-   git clone <repository-url>
-   cd dexcelerate-frontend-test-task
-   ```
-
-2. **Install stuff**
-   ```bash
-   npm install
-   ```
-
-3. **Start coding**
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-5. **Preview your build**
-   ```bash
-   npm run preview
-   ```
-
 ## Development Approach
 
 ### How This Is built
@@ -98,12 +64,10 @@ The app follows a clean, modular structure that's easy to work with:
 ### Performance Tricks
 
 - **Virtual Scrolling**: Only renders what you can see, so scrolling through thousands of tokens feels smooth
-- **Smart Updates**: WebSocket updates with minimal re-renders
 
 ### Math That Actually Works
 
-- **BigNumber.js**: No more floating-point weirdness in your crypto calculations
-- **Market Cap**: Proper handling of those big numbers and percentage changes
+- **BigNumber.js**: No more floating-point weirdness in your crypto calculations. Might be an overkill, but makes sure everything is ok.
 
 ## Usage
 
@@ -128,13 +92,7 @@ The app follows a clean, modular structure that's easy to work with:
 #### Filtering
 - **Volume Filter**: Set minimum volume thresholds
 - **Age Filter**: Filter tokens by when they were created
-- **Market Cap Filter**: Set minimum market cap
 - **No Honeypots**: Toggle to avoid sketchy tokens
-
-#### Real-time Goodness
-- **Live Prices**: Token prices update in real-time
-- **Audit Updates**: Contract verification and security status
-- **Transaction Counts**: Buy/sell counts update live
 
 ### API Integration
 
