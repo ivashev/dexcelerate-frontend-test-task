@@ -5,10 +5,9 @@
 A high-performance React app that shows real-time crypto token data in two side-by-side tables with infinite scrolling. Think of it like a live dashboard for tracking trending and new tokens across different blockchains, with data that updates in real-time via WebSocket connections. Perfect for anyone who wants to keep an eye on the crypto market without refreshing their browser every 5 seconds.
 
 ## Issues
+### Known Problems & Limitations
 
-### 🐛 Known Problems & Limitations
-
-Here's what's currently broken or missing - we're working on it! 
+Here's what's currently broken or missing
 
 #### Data Type Issues
 - **priceUsd field**: The API returns `priceUsd` as a number, but it should be a string for proper precision handling. This can cause weird floating-point math issues when dealing with crypto prices.
