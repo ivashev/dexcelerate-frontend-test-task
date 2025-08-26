@@ -92,6 +92,8 @@ The app follows a clean, modular structure that's easy to work with:
 - **Hooks**: Custom logic for managing data and state
 - **Types**: Full TypeScript coverage so you know exactly what you're working with
 - **Utils**: Pure functions for processing data and calculations
+- **Styling**: Utilizing Tailwind to avoid custom styles
+- **Coloring**: Generated color palette from the original Dexcelerate website
 
 ### Performance Tricks
 
